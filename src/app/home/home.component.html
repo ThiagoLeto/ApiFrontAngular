@@ -20,21 +20,67 @@
     
         <div id="abm">
             <h2>ABM</h2>
-            <div class="utilidad">
-                <h3>Ver</h3>
-                <i class="large material-icons">arrow_drop_down</i>
+            <div  class="clase" id="Registros">
+                <h3>Registros</h3>
+                <div class="utilidad">
+                    <h3>Get</h3>
+                    <i class="large material-icons">arrow_drop_down</i>
+                    <ng-template ngFor let-item [ngForOf]="data" let-i="index" >
+                        <li> ID: {{data[i]._id}} | Fecha: {{data[i].fecha}} | Precio: {{data[i].precio}} </li>
+                    </ng-template>
+                </div>
+                <div class="utilidad">
+                    <h3>Post</h3>
+                    <i class="large material-icons">arrow_drop_down</i>
+                    <input type="text" placeholder="Escriba la fecha"> 
+                    <input type="text" placeholder="Escriba el precio">
+                    <button> Agregar </button>
+                </div>
+                <div class="utilidad">
+                    <h3>Delete</h3>
+                    <i class="large material-icons">arrow_drop_down</i>
+                    <input type="text" placeholder="Escriba el id">
+                    <button> Borrar </button>
+                </div>
+                <div class="utilidad">
+                    <h3>PutPatch</h3>
+                    <i class="large material-icons">arrow_drop_down</i>
+                    <input type="text" placeholder="Id del elemento a cambiar">
+                    <input type="text" placeholder="Fecha">
+                    <input type="text" placeholder="Precio">
+                    <!--Tener un if de que si lo ingresado es null, que sea igual a lo que ya estaba antes-->
+                    <button> Cambiar </button>
+                </div>
             </div>
-            <div class="utilidad">
-                <h3>Agregar</h3>
-                <i class="large material-icons">arrow_drop_down</i>
-            </div>
-            <div class="utilidad">
-                <h3>Borrar</h3>
-                <i class="large material-icons">arrow_drop_down</i>
-            </div>
-            <div class="utilidad">
-                <h3>Cambiar</h3>
-                <i class="large material-icons">arrow_drop_down</i>
+            <div style="margin-top: 10%;" class="clase" id="Productos">
+                <h3>Productos</h3>
+                <div class="utilidad">
+                    <h3>Get</h3>
+                    <i class="large material-icons">arrow_drop_down</i>
+                    <ng-template ngFor let-item [ngForOf]="data" let-i="index" >
+                        <li> ID: {{data[i]._id}} | Fecha: {{data[i].fecha}} | Precio: {{data[i].precio}} </li>
+                    </ng-template>
+                </div>
+                <div class="utilidad">
+                    <h3>Post</h3>
+                    <i class="large material-icons">arrow_drop_down</i>
+                    <input type="text" placeholder="Escriba el nombre"> 
+                    <button> Agregar </button>
+                </div>
+                <div class="utilidad">
+                    <h3>Delete</h3>
+                    <i class="large material-icons">arrow_drop_down</i>
+                    <input type="text" placeholder="Escriba el id">
+                    <button> Borrar </button>
+                </div>
+                <div class="utilidad">
+                    <h3>PutPatch</h3>
+                    <i class="large material-icons">arrow_drop_down</i>
+                    <input type="text" placeholder="Id del elemento a cambiar">
+                    <input type="text" placeholder="Nombre">
+                    <!--Tener un if de que si lo ingresado es null, que sea igual a lo que ya estaba antes-->
+                    <button> Cambiar </button>
+                </div>
             </div>
         </div>
     </div>
@@ -49,18 +95,8 @@
     #tt{
         padding: 8%;
     }
-    #user{
-
-    }
-    #inputs{
-
-    }
-
     #abm{
         margin-top: 10%;
-    }
-    .utilidad{
-
     }
 
 

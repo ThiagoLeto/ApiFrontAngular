@@ -19,4 +19,6 @@ export class HomeComponent implements OnInit{
       return this.data.find( (x)=>x._id==="648b57d6fb911367b557771f" )
     })
   }
+  
+  
 }
