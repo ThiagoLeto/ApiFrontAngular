@@ -1,1 +1,23 @@
-<h1>aaa</h1>
+<h1>Registros</h1>
+
+<button [routerLink]="['/registros/postRegistro']">Crear registro</button>
+
+<div id="get">
+  <h3>Ver registros</h3>
+  <table class="table">
+    <thead>
+      <tr>
+        <th scope="col">id</th>
+        <th scope="col">Precio</th>
+        <th scope="col">Fecha</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let registro of registros">
+        <th scope="row"> {{ registro }} </th>
+        <td> {{ registro.precio }} </td>
+        <td> {{ registro.fecha }} </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
