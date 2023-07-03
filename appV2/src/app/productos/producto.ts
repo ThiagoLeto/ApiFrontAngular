@@ -1,5 +1,7 @@
+import { Registro } from '../registros/registro';
+
 export class Producto {
     id: number 
     nombre: string
-    //array del registro
+    precioxfecha: Array<Registro>    
 }

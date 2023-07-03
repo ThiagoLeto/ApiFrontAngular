@@ -8,11 +8,16 @@ import { AppComponent } from './app.component';
 import { ProductosComponent } from './productos/productos.component';
 import { RegistrosComponent } from './registros/registros.component';
 import { PostRegistroComponent } from './registros/post-registro/post-registro.component';
+import { MenuComponent } from './menu/menu.component';
+import { PostProductoComponent } from './productos/post-producto/post-producto.component';
 
 const rutas: Routes=[
-  { path: '', redirectTo:'/registros', pathMatch:'full' },
+  { path: '', redirectTo:'/menu', pathMatch:'full' },
+  { path: 'menu', component: MenuComponent },
   { path: 'registros', component: RegistrosComponent },
-  { path: 'registros/postRegistro', component: PostRegistroComponent }
+  { path: 'registros/postRegistro', component: PostRegistroComponent },
+  { path: 'productos', component: ProductosComponent },
+  { path: 'productos/postProducto', component: PostProductoComponent }
 ]
 
 @NgModule({
@@ -20,7 +25,9 @@ const rutas: Routes=[
     AppComponent,
     ProductosComponent,
     RegistrosComponent,
-    PostRegistroComponent
+    PostRegistroComponent,
+    MenuComponent,
+    PostProductoComponent
   ],
   imports: [
     BrowserModule,

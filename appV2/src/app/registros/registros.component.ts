@@ -14,7 +14,7 @@ export class RegistrosComponent implements OnInit{
 
   ngOnInit(): void {
     this.registroService.getAll().subscribe(
-      r => this.registros=r
+      r => this.registros = r
     );
   }
 }

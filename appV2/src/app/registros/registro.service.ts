@@ -16,23 +16,24 @@ export class RegistroService {
     return this.http.get<Registro[]>(this.url);
   }
   getPrecio(precios:number): Observable<Registro[]>{
-    return this.http.get<Registro[]>(this.url+'/precio/'+precios);
+    return this.http.get<Registro[]>(this.url + '/' + precios);
   }
   getFecha(fechas:string): Observable<Registro[]>{
-    return this.http.get<Registro[]>(this.url+'/fecha/'+fechas);
+    return this.http.get<Registro[]>(this.url + '/' + fechas);
   }
 
   add(registro:Registro):Observable<Registro>{
     return this.http.post<Registro>(this.url, registro)
   }
+  
   updateAll(registro:Registro):Observable<Registro>{
     return this.http.put<Registro>(this.url, registro);
   }
 
-  deletePrecio(precio: number):Observable<Registro>{
-    return this.http.delete<Registro>(this.url+'/precio/'+precio)
+  deleteId(precio: number):Observable<Registro>{
+    return this.http.delete<Registro>(this.url + '/' + precio)
   }
-  deleteFecha(fecha: string):Observable<Registro>{
-    return this.http.delete<Registro>(this.url+'/precio/' + fecha)
+  deleteNombre(fecha: string):Observable<Registro>{
+    return this.http.delete<Registro>(this.url + '/' + fecha)
   }
 }
